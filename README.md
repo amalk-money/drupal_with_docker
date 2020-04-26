@@ -1,15 +1,15 @@
 # drupal_with_docker
 ## Overview of the project:
-#### I’m implementing drupal web applicaton using docker container integrated with MYSQL and POSTGRES database. This project is done on Red Hat Linux and so all the commands are with reference to this OS.
+I’m implementing drupal web applicaton using docker container integrated with MYSQL and POSTGRES database. This project is done on Red Hat Linux and so all the commands are with reference to this OS.
 
 ## 1. Setting up the docker
 
-### I’m using docker community edition on the Red Hat Linux Enterprise Edition. To run any OS or application, we require its image to work on it. Using the command “docker pull image-name” we can get the image.
+I’m using docker community edition on the Red Hat Linux Enterprise Edition. To run any OS or application, we require its image to work on it. Using the command “docker pull image-name” we can get the image.
 
 ## 2. Pulling the required Images:
 
 ### a. DRUPAL Image:
-### •	I used “drupal:8-apache“ version to carry out this project.
+•	I used “drupal:8-apache“ version to carry out this project.
 ### •	Command to pull this image: “docker pull drupal:8-apache”
 ### •	For more information about DRUPAL image, go to :
 
