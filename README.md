@@ -5,7 +5,9 @@ I’m implementing drupal web applicaton using docker container integrated with 
 
 ## Setting up the docker
 
-I’m using docker community edition on the Red Hat Linux Enterprise Edition. To run any OS or application, we require its image to work on it. Using the command ‘’’bash docker pull image-name’’’ we can get the image.
+I’m using docker community edition on the Red Hat Linux Enterprise Edition. To run any OS or application, we require its image to work on it. Using the command '''bash 
+docker pull image-name
+''' we can get the image.
 
 ## Pulling the required Images:
 
