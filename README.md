@@ -8,7 +8,8 @@ I’m using docker community edition on the Red Hat Linux Enterprise Edition. To
 # 2. Pulling the required Images:
 
 ## a. DRUPAL Image:
-•	I used “drupal:8-apache“ version to carry out this project.
+<ul>	
+<li> I used “drupal:8-apache“ version to carry out this project.</li>
 •	Command to pull this image: “docker pull drupal:8-apache”
 •	For more information about DRUPAL image, go to :
 
