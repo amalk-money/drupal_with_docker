@@ -1,6 +1,6 @@
 # drupal_with_docker
 ## Overview of the project:
-### I’m implementing drupal web applicaton using docker container integrated with MYSQL and POSTGRES database. This project is done on Red Hat Linux and so all the commands are with reference to this OS.
+#### I’m implementing drupal web applicaton using docker container integrated with MYSQL and POSTGRES database. This project is done on Red Hat Linux and so all the commands are with reference to this OS.
 
 ## 1. Setting up the docker
 
