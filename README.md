@@ -14,7 +14,9 @@ docker pull image-name
 ### DRUPAL Image:
 
 <ul><li>I used “drupal:8-apache“ version to carry out this project. </li>
-<li>Command to pull this image: ‘’’bash docker pull drupal:8-apache’’’ </li>
+<li>Command to pull this image: '''
+	docker pull drupal:8-apache
+	'''</li>
 <li>For more information about DRUPAL image, go to : </li></ul>
 
 ### MySQL Image
