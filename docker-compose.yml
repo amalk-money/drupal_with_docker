@@ -1,0 +1,58 @@
+version: '3'
+services:
+        drupalDB:
+                image: mysql:5.7
+                volumes:
+                        - mysql_drupal:/var/lib/mysql
+                restart: always
+                networks:
+                        - drupalNET
+                environment:
+                        MYSQL_ROOT_PASSWORD: rootpass
+                        MYSQL_USER: user
+                        MYSQL_PASSWORD: passcode
+                        MYSQL_DATABASE: drupal
+        drupalPOST:
+                image: postgres:10                
+                volumes:
+                        - post_drupal:/var/lib/mysql
+                restart: always
+                networks:
+                        - drupalNET
+                environment:
+                        POSTGRES_USER: user
+                        POSTGRES_PASSWORD: passcode
+                        POSTGRES_DB: drupal
+
+        drupalAPP:
+                image: drupal:8-apache
+                volumes:
+                        - drupal-modules:/var/www/html/modules
+                        - drupal-sites:/var/www/html/sites
+                        - drupal-themes:/var/www/html/themesss
+                        - drupal-profiles:/var/www/html/profiles
+                networks:
+                        - drupalNET
+                depends_on:
+                        - drupalDB
+                        - drupalPOST
+                ports:
+                        - 8080:80
+                restart: always
+                environment:
+                        MYSQL_USER: user
+                        MYSQL_PASSWORD: passcode
+                        POSTGRES_USER: user
+                        POSTGRES_PASSWORD: passcode
+volumes:
+        mysql_drupal:
+        post_drupal:
+        drupal-modules:
+        drupal-sites:
+        drupal-themes:
+        drupal-profiles:
+
+networks:
+        drupalNET:
+                driver: bridge
+
