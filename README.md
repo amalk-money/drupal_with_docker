@@ -12,7 +12,9 @@ I’m using docker community edition on the Red Hat Linux Enterprise Edition. To
 ### DRUPAL Image:
 
 <ul><li>I used “drupal:8-apache“ version to carry out this project. </li>
-<li>Command to pull this image: ``` docker pull drupal:8-apache ```</li>
+<li>Command to pull this image: ```
+				docker pull drupal:8-apache 
+				```</li>
 <li>For more information about DRUPAL image, go to : </li></ul>
 
 ### MySQL Image
