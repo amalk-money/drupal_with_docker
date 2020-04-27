@@ -81,6 +81,7 @@ drupal:8-apache”
 •	All you need to do is to get the docker-compose.yml file and run the command:                “#docker-compose up”.
  
 •	This will provide you the infrastructure into your machine, with all the volumes, network automatically created when the program runs.
+![docker-compose up](https://github.com/amalk-money/drupal_with_docker/blob/master/ScreenShots/up.png)
 ## Getting started with the drupal application:
 •	To run the drupal application, go to your browser and type “localhost:8080”
  
