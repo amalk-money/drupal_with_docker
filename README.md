@@ -18,7 +18,7 @@ I’m using docker community edition on the Red Hat Linux Enterprise Edition. To
 ### MySQL Image
 
 <ul><li>I used “mysql:5.7”  version to carry out this project. </li>
-<li>Command to pull this image: ‘’’bash docker pull mysql:5.7 ’’’ </li>
+<li>Command to pull this image: ``` docker pull mysql:5.7 ```</li>
 <li>For more information about MYSQL image, go to : </li></ul>
 
 ### POSTGRES Image
