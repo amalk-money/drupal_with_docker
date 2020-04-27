@@ -6,24 +6,24 @@ I’m implementing drupal web applicaton using docker container integrated with 
 
 ## Setting up the docker
 
-I’m using docker community edition on the **Red Hat Linux Enterprise Edition**. To run any OS or application, we require its image to work on it. Using the command ``` docker pull image-name ``` , we can get the image.
+I’m using docker community edition on the **Red Hat Linux Enterprise Edition**. To run any OS or application, we require its image to work on it. Using the command ` docker pull image-name ` , we can get the image.
 
 ## Pulling the required Images
 
 ### DRUPAL Image
 
-<ul><li>I used **drupal:8-apache** version to carry out this project. </li>
-<li>Command to pull this image: ``` docker pull drupal:8-apache ``` </li>
-<li>For more information about DRUPAL image, go to : https://hub.docker.com/_/drupal</li></ul>
+* I used **drupal:8-apache** version to carry out this project.
+* Command to pull this image: ` docker pull drupal:8-apache `
+* For more information about DRUPAL image, go to : https://hub.docker.com/_/drupal
 
 ### MySQL Image
 <ul><li>I used **mysql:5.7**  version to carry out this project. </li>
-<li>Command to pull this image: ``` docker pull mysql:5.7 ``` </li>
+<li>Command to pull this image: ` docker pull mysql:5.7 ` </li>
 <li>For more information about MYSQL image, go to : https://hub.docker.com/_/mysql</li></ul>
 
 ### POSTGRES Image
 <ul><li>I used **postgres:10** version to carry out this project. </li>
-<li>Command to pull this image: ``` docker pull postgres:10 ``` </li>
+<li>Command to pull this image: ` docker pull postgres:10 ` </li>
 <li>For more information about POSTGRES image, go to : https://hub.docker.com/_/postgres</li></ul>
 
 ## How to use DRUPAL Image
@@ -42,38 +42,39 @@ I’m using docker community edition on the **Red Hat Linux Enterprise Edition**
 <li>New user called **user** is created with password **passcode** and created a database called **drupal**.</li></ul>
 
 ## How to use POSTGRES Image:
+
 <ul><li>Similarly like MYSQL, we can configure the POSTGRES image in the same way, just differs in the environment variable name:</li>
-``` #docker run - dit --name  drupalPOST  
+` #docker run - dit --name  drupalPOST  
 -v post_storage:/var/lib/mysql/ --network drupalNET 
 -e POSTGRES_USER=user 
 -e POSTGRES _PASSWORD=passcode 
--e POSTGRES _DB=drupal  postgres:10 ```
+-e POSTGRES _DB=drupal  postgres:10 `
 <li>A new user called **user** is created with password **passcode** and created a database called **drupal**.</li></ul>
 
 ## Integrating Drupal with database
 
 ### MYSQL
 <ul><li>While running the drupal container, we need to give the mysql username and password and using link attribute to link to the database.</li></ul>
- #docker run -dit  -- name drupal-name -p 8080:80 
+` #docker run -dit  --name drupal-name -p 8080:80 
 -e MYSQL_USER=user 
 -e MYSQL_PASSWORD=passcode 
--- link drupalDB drupal:8-apache 
+-- link drupalDB drupal:8-apache `
 
 ### POSTGRES
 <ul><li>Similarly, for the drupal to integrate with postgress, while running the container we need to give username and password and link attribute to link to database. .</li></ul>
-` #docker run -dit  --name drupal-name  -p 8080:80 \
--e POSTGRES_USER=user \/
--e POSTGRES _PASSWORD=passcode \ /
--- link drupalDB drupal:8-apache `
+``` #docker run -dit  --name drupal-name  -p 8080:80 
+-e POSTGRES_USER=user 
+-e POSTGRES _PASSWORD=passcode 
+-- link drupalDB drupal:8-apache ```
 
 ## Volumes associated with drupal
 <ul><li>Drupal Image requires volume to store the data. It uses volume to store the site, module, theme and profile data.</li></ul>
-` docker run - dit  -- name drupalAPP  -- network  drupalNET 
+``` docker run - dit  -- name drupalAPP  -- network  drupalNET 
 	-v drupal-module:/var/www/html/modules
 	-v drupal-sites:/var/www/html/ sites
 	-v drupal- themes:/var/www/html/themes
 -v drupal- profiles:/var/www/html/profiles
-drupal:8-apache `
+drupal:8-apache ```
 
 ## Docker-compose:
 <ul><li>To start with docker compose, we need to install the docker compose first because it doesn’t come with the docker software itself.</li>
