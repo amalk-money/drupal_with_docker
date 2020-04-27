@@ -17,29 +17,29 @@ I’m using docker community edition on the **Red Hat Linux Enterprise Edition**
 * For more information about DRUPAL image, go to : https://hub.docker.com/_/drupal
 
 ### MySQL Image
-<ul><li>I used **mysql:5.7**  version to carry out this project. </li>
-<li>Command to pull this image: ` docker pull mysql:5.7 ` </li>
-<li>For more information about MYSQL image, go to : https://hub.docker.com/_/mysql</li></ul>
+* I used **mysql:5.7**  version to carry out this project.
+* Command to pull this image: ` docker pull mysql:5.7 `
+* For more information about MYSQL image, go to : https://hub.docker.com/_/mysql
 
 ### POSTGRES Image
-<ul><li>I used **postgres:10** version to carry out this project. </li>
-<li>Command to pull this image: ` docker pull postgres:10 ` </li>
-<li>For more information about POSTGRES image, go to : https://hub.docker.com/_/postgres</li></ul>
+* I used **postgres:10** version to carry out this project.
+* Command to pull this image: ` docker pull postgres:10 `
+* For more information about POSTGRES image, go to : https://hub.docker.com/_/postgres
 
 ## How to use DRUPAL Image
 
-<ul><li> ``` #docker run -dit  -- name drupal-name -p 8088:80 drupal:8-apache ``` will run the basic drupal web application.</li>
-<li>And to access it, use http://localhost:8088 or http://host-ip:8088 to access the application on the web browser. </li>
-<li>This image supports multiple databases, so I thought to integrate it with MYSQL and POSTGRES database. </li></ul>
+* ` #docker run -dit  -- name drupal-name -p 8088:80 drupal:8-apache ` will run the basic drupal web application.
+* And to access it, use http://localhost:8088 or http://host-ip:8088 to access the application on the web browser.
+* This image supports multiple databases, so I thought to integrate it with MYSQL and POSTGRES database.
 
 ## How to use MYSQL Image
-<ul><li>To integrate Drupal with MYSQL, first we need to run the MYSQL container and configure with the required environment variables:</li>
-``` bash #docker run - dit --name drupalDB -v mysql_storage:/var/lib/mysql/  --network drupalNET 
+* To integrate Drupal with MYSQL, first we need to run the MYSQL container and configure with the required environment variables:</li>
+` bash #docker run - dit --name drupalDB -v mysql_storage:/var/lib/mysql/  --network drupalNET 
 -e MYSQL_ROOT_PASSWORD=rootpass 
 -e MYSQL_USER=user 
 -e MYSQL_PASSWORD=passcode 
--e MYSQL_DATABASE=drupal  mysql:5.7 ``` 
-<li>New user called **user** is created with password **passcode** and created a database called **drupal**.</li></ul>
+-e MYSQL_DATABASE=drupal  mysql:5.7 `
+* New user called **user** is created with password **passcode** and created a database called **drupal**.
 
 ## How to use POSTGRES Image:
 
