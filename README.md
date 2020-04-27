@@ -15,7 +15,7 @@ I’m using docker community edition on the Red Hat Linux Enterprise Edition. To
 <li>Command to pull this image: ```
 				docker pull drupal:8-apache 
 				```</li>
-<li>For more information about DRUPAL image, go to : </li></ul>
+<li>For more information about DRUPAL image, go to : https://hub.docker.com/_/drupal</li></ul>
 
 ### MySQL Image
 
