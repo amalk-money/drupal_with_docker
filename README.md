@@ -36,9 +36,9 @@ I’m using docker community edition on the **Red Hat Linux Enterprise Edition**
 * To integrate Drupal with MYSQL, first we need to run the MYSQL container and configure with the required environment variables:</li>
 ` bash #docker run - dit --name drupalDB \ 
 -v mysql_storage:/var/lib/mysql/  --network drupalNET \ 
--e MYSQL_ROOT_PASSWORD=rootpass \
--e MYSQL_USER=user \
--e MYSQL_PASSWORD=passcode \
+-e MYSQL_ROOT_PASSWORD=rootpass /
+-e MYSQL_USER=user /
+-e MYSQL_PASSWORD=passcode /
 -e MYSQL_DATABASE=drupal  mysql:5.7 `
 * New user called **user** is created with password **passcode** and created a database called **drupal**.
 
